@@ -1,0 +1,10 @@
+﻿scenario,task,expected_state,actual_state,expected_fault,actual_fault,elapsed_ticks,elapsed_seconds,completed_laps,status
+normal_track_5_laps,TRACK_N,DONE,DONE,NONE,NONE,1501,15.01,5,PASS
+normal_aim_2s_20fps,AIM_2S,DONE,DONE,NONE,NONE,61,0.61,0,PASS
+normal_aim_4s_20fps,AIM_4S,DONE,DONE,NONE,NONE,161,1.61,0,PASS
+normal_move_aim_1_lap,MOVE_1,DONE,DONE,NONE,NONE,301,3.01,1,PASS
+normal_move_aim_2_laps,MOVE_2,DONE,DONE,NONE,NONE,601,6.01,2,PASS
+normal_move_draw_circle,CIRCLE,DONE,DONE,NONE,NONE,1201,12.01,1,PASS
+fault_drive_no_feedback,TRACK_N,FAULT,FAULT,NO FB,NO FB,200,2.0,0,PASS
+fault_k230_dropout,MOVE_2,FAULT,FAULT,K230 LOST,K230 LOST,136,1.36,0,PASS
+abort_sw4_move_aim,MOVE_1,ABORTED,ABORTED,E-STOP,E-STOP,80,0.8,0,PASS

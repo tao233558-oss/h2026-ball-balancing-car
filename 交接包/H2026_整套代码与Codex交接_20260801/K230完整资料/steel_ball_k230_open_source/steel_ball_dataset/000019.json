@@ -1,0 +1,117 @@
+{
+  "version": "4.0.0-beta.12",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          461.52,
+          386.52
+        ],
+        [
+          690.48,
+          615.48
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          556.96,
+          329.96
+        ],
+        [
+          735.04,
+          508.04
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          666.38,
+          338.38
+        ],
+        [
+          1041.62,
+          713.62
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          953.14,
+          395.14
+        ],
+        [
+          1124.86,
+          566.86
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1087.46,
+          362.46
+        ],
+        [
+          1530.54,
+          805.54
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "description": null,
+  "checked": true,
+  "imagePath": "000019.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

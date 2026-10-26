@@ -1,0 +1,14 @@
+.venv*/
+.dotnet/
+.runtime/
+.ultralytics/
+.matplotlib/
+.kmodel_work/
+.kmodel_validate/
+third_party/
+runs/
+__pycache__/
+*.py[cod]
+*.part
+*.tmp
+

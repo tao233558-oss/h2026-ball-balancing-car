@@ -1,0 +1,6 @@
+# Training supports Python 3.10-3.12. KModel conversion uses a separate env.
+ultralytics>=8.0.207,<9
+onnx>=1.15,<2
+onnxruntime>=1.19,<2
+# onnxsim is intentionally excluded here. It has no CPython 3.12 Windows
+# wheel and is only required by the separate nncase conversion environment.

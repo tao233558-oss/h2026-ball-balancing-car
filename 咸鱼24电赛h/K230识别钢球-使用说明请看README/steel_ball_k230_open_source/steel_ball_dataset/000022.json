@@ -1,0 +1,327 @@
+{
+  "version": "4.0.0-beta.12",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1348.64,
+          298.64
+        ],
+        [
+          1573.36,
+          523.36
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1051.64,
+          508.64
+        ],
+        [
+          1276.36,
+          733.36
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          861.82,
+          274.82
+        ],
+        [
+          1080.18,
+          493.18
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1479.82,
+          389.82
+        ],
+        [
+          1698.18,
+          608.18
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1143.0,
+          333.0
+        ],
+        [
+          1355.0,
+          545.0
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1255.0,
+          480.0
+        ],
+        [
+          1467.0,
+          692.0
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          637.12,
+          347.12
+        ],
+        [
+          844.88,
+          554.88
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          516.18,
+          423.18
+        ],
+        [
+          721.82,
+          628.82
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          918.3,
+          403.3
+        ],
+        [
+          1119.7,
+          604.7
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          363.48,
+          476.48
+        ],
+        [
+          558.52,
+          671.52
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          701.48,
+          478.48
+        ],
+        [
+          896.52,
+          673.52
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1076.66,
+          636.66
+        ],
+        [
+          1265.34,
+          825.34
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          441.66,
+          589.66
+        ],
+        [
+          630.34,
+          778.34
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          902.84,
+          669.84
+        ],
+        [
+          1085.16,
+          852.16
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          686.96,
+          686.96
+        ],
+        [
+          865.04,
+          865.04
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "description": "Dense or occluded steel-ball instances require final visual review.",
+  "checked": false,
+  "imagePath": "000022.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

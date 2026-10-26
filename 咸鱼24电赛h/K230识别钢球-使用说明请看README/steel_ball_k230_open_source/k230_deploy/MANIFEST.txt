@@ -1,0 +1,16 @@
+K230 steel-ball deployment manifest
+
+steel_ball_yolov8n_320.kmodel
+  size: 6438200 bytes
+  sha256: DD5EA6AA80280733F93043AC0691AC09625A4DCF66BA6FA47BD28E0391E2C7A6
+  nncase: 2.11.0
+  input: uint8 NCHW 1x3x320x320
+  output: float32 1x5x2100
+  class: steel_ball
+
+main.py
+  sha256: 6436864BB327DA802481C799B9B0380BF0EDE541FF26B05FB0D1C3ED10C9DC50
+
+Host-side comparison:
+  ONNX/KModel cosine similarity: 0.99995252
+  result: PASS

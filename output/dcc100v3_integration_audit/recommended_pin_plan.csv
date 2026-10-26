@@ -1,0 +1,6 @@
+net,mcu_pin,lqfp64,dcc_signal,status
+PAN_STEP,PA26,30,DCC_PWM1,existing
+PAN_DIR,PA14,7,DCC_DIR1,existing
+TILT_STEP,PB4,52,DCC_PWM2,new
+TILT_DIR,PB5,53,DCC_DIR2,new
+DCC_AWAKE,PB17,14,DCC_SLP1+SLP2,new

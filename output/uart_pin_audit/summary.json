@@ -1,0 +1,209 @@
+{
+  "result": "PASS",
+  "hardware_validation": "NOT_RUN",
+  "sdk_header": "E:\\2\\TI\\CCS\\mspm0_sdk_2_00_01_00_local\\source\\ti\\devices\\msp\\m0p\\mspm0g350x.h",
+  "uart_endpoint_count": 4,
+  "source_checks": [
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM21_PF_UART0_TX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM22_PF_UART0_RX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM19_PF_UART1_TX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM20_PF_UART1_RX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM32_PF_UART2_TX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM47_PF_UART2_RX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM15_PF_UART3_TX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_uart.c",
+      "marker": "IOMUX_PINCM16_PF_UART3_RX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.h",
+      "marker": "#define OLED_SCL_Pin  DL_GPIO_PIN_0",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.h",
+      "marker": "#define OLED_SDA_Pin  DL_GPIO_PIN_1",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.h",
+      "marker": "#define OLED_SCL PB0",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.h",
+      "marker": "#define OLED_SDA PB1",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.c",
+      "marker": "DL_GPIO_disableOutput(OLED_GPIO, pin)",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_oled.c",
+      "marker": "Release SDA so the slave can drive the ACK bit",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "marker": "#define I2C_SCL              PB0",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "marker": "#define I2C_SDA              PB1",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "marker": "DL_GPIO_disableOutput(I2C_GPIO, pin)",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "marker": "I2C_WriteBuffer",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "marker": "I2C_ReadBuffer",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "marker": "TOF200F_I2C_ADDRESS_8BIT 0x52U",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "marker": "TOF200F_EXPECTED_MODEL_ID 0xEEAAU",
+      "result": "PASS"
+    },
+    {
+      "file": "user/xunji.c",
+      "marker": "D7/R3=PB25",
+      "result": "PASS"
+    },
+    {
+      "file": "user/xunji.c",
+      "marker": "gpio_init(GPIOB, DL_GPIO_PIN_25, PB25, IN_UP)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/xunji.c",
+      "marker": "gpio_get(GPIOB, DL_GPIO_PIN_25)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/track.c",
+      "marker": "gpio_init(GPIOB, DL_GPIO_PIN_25, PB25, IN_UP)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/track.c",
+      "marker": "gpio_get(GPIOB, DL_GPIO_PIN_25)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/app_config.h",
+      "marker": "#define E2025_ENABLE_K230_UART0_BRIDGE 0",
+      "result": "PASS"
+    },
+    {
+      "file": "user/app_config.h",
+      "marker": "#define E2025_ENABLE_K230_UART2 0",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "#if E2025_ENABLE_K230_UART2",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "uart_init(UART2, 115200, 1)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "Wiring: PB0=SCL, PB1=SDA",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "tof200f_read_mm",
+      "result": "PASS"
+    },
+    {
+      "file": "user/isr.c",
+      "marker": "void UART2_IRQHandler(void)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/isr.c",
+      "marker": "k230_link_push_byte(byte)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/xunji.c",
+      "marker": "forbidden: D7=PA3",
+      "result": "PASS"
+    },
+    {
+      "file": "user/xunji.c",
+      "marker": "forbidden: DL_GPIO_PIN_3,  PA3,  IN_UP",
+      "result": "PASS"
+    },
+    {
+      "file": "user/track.c",
+      "marker": "forbidden: DL_GPIO_PIN_3,  PA3,  IN_UP",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "forbidden: tof_uart_init",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "forbidden: TOF wiring: PB04",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "marker": "forbidden: PB05(RX)<-TOF TX",
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}

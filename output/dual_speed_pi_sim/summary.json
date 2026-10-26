@@ -1,0 +1,58 @@
+{
+  "suite": "dual_speed_pi",
+  "sample_ms": 100,
+  "target_counts_per_sample": 10,
+  "pi": {
+    "kp": 18,
+    "ki": 6,
+    "integrator_limit": 100
+  },
+  "pwm": {
+    "feedforward": 600,
+    "minimum": 400,
+    "maximum": 900
+  },
+  "hardware_verified": false,
+  "target_is_placeholder": true,
+  "cases": [
+    {
+      "case": "pi_clamp_anti_windup_and_reset",
+      "status": "PASS"
+    },
+    {
+      "case": "asymmetric_motors_converge",
+      "status": "PASS",
+      "left_counts": 10,
+      "right_counts": 10,
+      "left_pwm": 582,
+      "right_pwm": 672
+    },
+    {
+      "case": "right_load_step_recovers",
+      "status": "PASS",
+      "right_counts": 10,
+      "right_pwm_before": 672,
+      "right_pwm_after": 768
+    },
+    {
+      "case": "raw_sw2_release_stops_same_tick",
+      "status": "PASS"
+    },
+    {
+      "case": "sw4_same_tick_latched_stop",
+      "status": "PASS"
+    },
+    {
+      "case": "no_feedback_stops_closed_loop",
+      "status": "PASS"
+    },
+    {
+      "case": "reverse_feedback_sign_valid",
+      "status": "PASS"
+    },
+    {
+      "case": "firmware_source_safety_markers",
+      "status": "PASS"
+    }
+  ]
+}

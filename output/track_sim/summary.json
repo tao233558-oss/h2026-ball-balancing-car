@@ -1,0 +1,70 @@
+{
+  "sensor_polarity": "raw white=1, black=0; internal pattern bit 1=black",
+  "tick_ms": 10,
+  "controller_cases": {
+    "center": {
+      "pattern": 24,
+      "error": 0,
+      "left_pwm": 1800,
+      "right_pwm": 1800,
+      "mode": "FOLLOW"
+    },
+    "left_offset": {
+      "pattern": 12,
+      "error": -10,
+      "left_pwm": 800,
+      "right_pwm": 2800,
+      "mode": "FOLLOW"
+    },
+    "right_offset": {
+      "pattern": 48,
+      "error": 10,
+      "left_pwm": 2800,
+      "right_pwm": 800,
+      "mode": "FOLLOW"
+    },
+    "lost_after_left": {
+      "pattern": 0,
+      "error": -10,
+      "left_pwm": 0,
+      "right_pwm": 1400,
+      "mode": "SEARCH_LEFT"
+    }
+  },
+  "corner_filter": {
+    "qualify_ms": 20,
+    "clear_to_rearm_ms": 50
+  },
+  "one_lap": {
+    "requested_laps": 1,
+    "completed_laps": 1,
+    "corner_events": 4,
+    "elapsed_ticks": 352,
+    "elapsed_seconds": 3.52
+  },
+  "two_laps": {
+    "requested_laps": 2,
+    "completed_laps": 2,
+    "corner_events": 8,
+    "elapsed_ticks": 704,
+    "elapsed_seconds": 7.04
+  },
+  "five_laps": {
+    "requested_laps": 5,
+    "completed_laps": 5,
+    "corner_events": 20,
+    "elapsed_ticks": 1760,
+    "elapsed_seconds": 17.6
+  },
+  "checks": {
+    "active_low_conversion": "PASS",
+    "steering_direction": "PASS",
+    "lost_line_search": "PASS",
+    "single_tick_corner_noise_rejected": "PASS",
+    "long_corner_bounce_not_recounted": "PASS",
+    "five_lap_synthetic_trace_under_20_seconds": "PASS",
+    "firmware_markers_match_model": "PASS",
+    "diagnostic_profile_safe_default": "PASS",
+    "encoder_atomic_read_and_safe_diag": "PASS"
+  }
+}

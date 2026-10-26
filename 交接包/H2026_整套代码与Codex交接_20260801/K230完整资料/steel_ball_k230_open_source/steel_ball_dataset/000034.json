@@ -1,0 +1,1314 @@
+{
+  "version": "4.0.0-beta.12",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          999.36,
+          0.0
+        ],
+        [
+          1092.64,
+          81.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          841.36,
+          22.36
+        ],
+        [
+          934.64,
+          115.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          699.36,
+          76.36
+        ],
+        [
+          792.64,
+          169.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1082.36,
+          105.36
+        ],
+        [
+          1175.64,
+          198.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          926.36,
+          134.36
+        ],
+        [
+          1019.64,
+          227.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          575.36,
+          145.36
+        ],
+        [
+          668.64,
+          238.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1229.36,
+          153.36
+        ],
+        [
+          1322.64,
+          246.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          784.36,
+          183.36
+        ],
+        [
+          877.64,
+          276.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          474.36,
+          230.36
+        ],
+        [
+          567.64,
+          323.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1054.36,
+          234.36
+        ],
+        [
+          1147.64,
+          327.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          660.36,
+          251.36
+        ],
+        [
+          753.64,
+          344.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          904.36,
+          261.36
+        ],
+        [
+          997.64,
+          354.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1197.36,
+          282.36
+        ],
+        [
+          1290.64,
+          375.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          964.36,
+          304.36
+        ],
+        [
+          1057.64,
+          397.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          398.36,
+          325.36
+        ],
+        [
+          491.64,
+          418.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          778.36,
+          326.36
+        ],
+        [
+          871.64,
+          419.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          559.36,
+          332.36
+        ],
+        [
+          652.64,
+          425.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1055.36,
+          358.36
+        ],
+        [
+          1148.64,
+          451.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          908.36,
+          383.36
+        ],
+        [
+          1001.64,
+          476.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          675.36,
+          404.36
+        ],
+        [
+          768.64,
+          497.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1194.36,
+          404.36
+        ],
+        [
+          1287.64,
+          497.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          482.36,
+          422.36
+        ],
+        [
+          575.64,
+          515.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          345.36,
+          425.36
+        ],
+        [
+          438.64,
+          518.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          802.36,
+          458.36
+        ],
+        [
+          895.64,
+          551.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1085.36,
+          487.36
+        ],
+        [
+          1178.64,
+          580.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          595.36,
+          490.36
+        ],
+        [
+          688.64,
+          583.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          939.36,
+          496.36
+        ],
+        [
+          1032.64,
+          589.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1258.36,
+          508.36
+        ],
+        [
+          1351.64,
+          601.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          449.36,
+          524.36
+        ],
+        [
+          542.64,
+          617.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          719.36,
+          544.36
+        ],
+        [
+          812.64,
+          637.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          851.36,
+          579.36
+        ],
+        [
+          944.64,
+          672.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1148.36,
+          586.36
+        ],
+        [
+          1241.64,
+          679.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          561.36,
+          591.36
+        ],
+        [
+          654.64,
+          684.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1005.36,
+          594.36
+        ],
+        [
+          1098.64,
+          687.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          442.36,
+          626.36
+        ],
+        [
+          535.64,
+          719.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          681.36,
+          642.36
+        ],
+        [
+          774.64,
+          735.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          810.36,
+          677.36
+        ],
+        [
+          903.64,
+          770.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1084.36,
+          682.36
+        ],
+        [
+          1177.64,
+          775.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          946.36,
+          687.36
+        ],
+        [
+          1039.64,
+          780.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          572.36,
+          692.36
+        ],
+        [
+          665.64,
+          785.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1226.36,
+          695.36
+        ],
+        [
+          1319.64,
+          788.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          456.36,
+          725.36
+        ],
+        [
+          549.64,
+          818.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          712.36,
+          741.36
+        ],
+        [
+          805.64,
+          834.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          868.36,
+          769.36
+        ],
+        [
+          961.64,
+          862.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1139.36,
+          776.36
+        ],
+        [
+          1232.64,
+          869.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1001.36,
+          779.36
+        ],
+        [
+          1094.64,
+          872.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          606.36,
+          787.36
+        ],
+        [
+          699.64,
+          880.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          491.36,
+          817.36
+        ],
+        [
+          584.64,
+          910.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          762.36,
+          831.36
+        ],
+        [
+          855.64,
+          924.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          899.36,
+          862.36
+        ],
+        [
+          992.64,
+          955.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1168.36,
+          871.36
+        ],
+        [
+          1261.64,
+          964.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1033.36,
+          874.36
+        ],
+        [
+          1126.64,
+          967.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          657.36,
+          875.36
+        ],
+        [
+          750.64,
+          968.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          545.36,
+          904.36
+        ],
+        [
+          638.64,
+          997.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          742.36,
+          946.36
+        ],
+        [
+          835.64,
+          1039.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          868.36,
+          949.36
+        ],
+        [
+          961.64,
+          1042.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          1127.36,
+          958.36
+        ],
+        [
+          1220.64,
+          1051.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          997.36,
+          960.36
+        ],
+        [
+          1090.64,
+          1053.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          629.36,
+          972.36
+        ],
+        [
+          722.64,
+          1065.64
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          728.36,
+          1031.36
+        ],
+        [
+          821.64,
+          1079.0
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          850.36,
+          1034.36
+        ],
+        [
+          943.64,
+          1079.0
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "steel_ball",
+      "score": null,
+      "points": [
+        [
+          976.36,
+          1039.36
+        ],
+        [
+          1069.64,
+          1079.0
+        ]
+      ],
+      "group_id": null,
+      "description": null,
+      "difficult": true,
+      "shape_type": "rectangle",
+      "flags": null,
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "description": "Dense or occluded steel-ball instances require final visual review.",
+  "checked": false,
+  "imagePath": "000034.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

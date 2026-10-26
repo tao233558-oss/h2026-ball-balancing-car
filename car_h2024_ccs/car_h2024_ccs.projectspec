@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSpec>
+    <applicability><when><context deviceFamily="ARM" deviceId="MSPM0G3507"/></when></applicability>
+    <project
+        title="car_h2024_ccs" name="car_h2024_ccs"
+        configurations="Debug" toolChain="TICLANG"
+        connection="TIXDS110_Connection.xml" device="MSPM0G3507"
+        ignoreDefaultDeviceSettings="true" ignoreDefaultCCSSettings="true"
+        products="MSPM0-SDK;sysconfig"
+        compilerBuildOptions="
+            -I${PROJECT_ROOT} -I${PROJECT_ROOT}/${ConfigName}
+            -I${PROJECT_ROOT}/user -I${PROJECT_ROOT}/ml_libs -I${PROJECT_ROOT}/code
+            -I${PROJECT_ROOT}/vl53l0x/core/inc -I${PROJECT_ROOT}/vl53l0x/platform
+            -O2 @device.opt
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -gdwarf-3 -mcpu=cortex-m0plus -march=thumbv6m -mfloat-abi=soft -mthumb"
+        linkerBuildOptions="
+            -ldevice.cmd.genlibs
+            -L${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -L${PROJECT_ROOT} -L${PROJECT_BUILD_DIR}/syscfg
+            -Wl,--rom_model -Wl,--warn_sections
+            -L${CG_TOOL_ROOT}/lib -llibc.a"
+        sysConfigBuildOptions="
+            --output . --product ${COM_TI_MSPM0_SDK_INSTALL_DIR}/.metadata/product.json
+            --compiler ticlang"
+        description="2024 NUEDC H automatic car based on the validated 2025 E CCS firmware baseline">
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <file path="car_h2024_ccs.syscfg" openOnCreation="true" excludeFromBuild="false" action="copy"/>
+        <file path="user/buzzer_light.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/bluetooth_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/aim_protocol.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_aim_adapter.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_aim_executor.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_app.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_drive_adapter.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_fault_manager.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_k230_command.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_sim.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/e2025_tof_adapter.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/dual_motor_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/dual_motor_guard.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/dual_speed_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/encoder.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/encoder_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/hardware_acceptance.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/h2024_app.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/h2024_app.h" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_protocol.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_protocol.h" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_link.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_link.h" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_app.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/v2026_nav_app.h" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/IMU.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/isr.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/key.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/k230_link.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/main.c" openOnCreation="true" excludeFromBuild="false" action="copy"/>
+        <file path="user/menu.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/motor_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/serical.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/track.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/tof200f.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/track_cascade_control.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/track_diag.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/wheel_speed_pi.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/xunji.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="user/_pid.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="code/pid.c" openOnCreation="false" excludeFromBuild="true" action="copy"/>
+        <file path="ml_libs/ml_delay.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_exti.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_gpio.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_i2c.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_motor.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_mpu6050.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_oled.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_pwm.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_system.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_tim.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="ml_libs/ml_uart.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/core/src/vl53l0x_api.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/core/src/vl53l0x_api_calibration.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/core/src/vl53l0x_api_core.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/core/src/vl53l0x_api_ranging.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/core/src/vl53l0x_api_strings.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+        <file path="vl53l0x/platform/vl53l0x_platform.c" openOnCreation="false" excludeFromBuild="false" action="copy"/>
+    </project>
+</projectSpec>

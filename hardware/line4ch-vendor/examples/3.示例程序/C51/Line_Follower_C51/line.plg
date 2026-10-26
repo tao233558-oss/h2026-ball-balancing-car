@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+Z:\08 配件系列\四路巡线传感器（旋钮调节）\开发版本\3.示例程序\C51\Line_Follower_C51\line.uvproj
+Project File Date:  07/31/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=150
+creating hex file from "line"...
+"line" - 0 Error(s), 0 Warning(s).

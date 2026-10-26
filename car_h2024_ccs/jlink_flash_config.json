@@ -1,0 +1,6 @@
+{
+  "chip": "MSPM0G3507",
+  "probe": "JLINK",
+  "compiler": "E:/2/TI/CCS/ccs/tools/compiler/ti-cgt-armllvm_5.1.1.LTS",
+  "jlink_path": "E:/Keil5/ARM/Segger/JLink.exe"
+}

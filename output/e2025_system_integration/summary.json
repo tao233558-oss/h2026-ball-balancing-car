@@ -1,0 +1,120 @@
+{
+  "suite": "e2025_full_system_integration",
+  "control_tick_ms": 10,
+  "vision_frame_rate_fps": 20,
+  "scenario_count": 9,
+  "normal_task_count": 6,
+  "fault_injection_count": 3,
+  "hardware_verified": false,
+  "all_passed": true,
+  "matrix": [
+    {
+      "scenario": "normal_track_5_laps",
+      "task": "TRACK_N",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 1501,
+      "elapsed_seconds": 15.01,
+      "completed_laps": 5,
+      "status": "PASS"
+    },
+    {
+      "scenario": "normal_aim_2s_20fps",
+      "task": "AIM_2S",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 61,
+      "elapsed_seconds": 0.61,
+      "completed_laps": 0,
+      "status": "PASS"
+    },
+    {
+      "scenario": "normal_aim_4s_20fps",
+      "task": "AIM_4S",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 161,
+      "elapsed_seconds": 1.61,
+      "completed_laps": 0,
+      "status": "PASS"
+    },
+    {
+      "scenario": "normal_move_aim_1_lap",
+      "task": "MOVE_1",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 301,
+      "elapsed_seconds": 3.01,
+      "completed_laps": 1,
+      "status": "PASS"
+    },
+    {
+      "scenario": "normal_move_aim_2_laps",
+      "task": "MOVE_2",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 601,
+      "elapsed_seconds": 6.01,
+      "completed_laps": 2,
+      "status": "PASS"
+    },
+    {
+      "scenario": "normal_move_draw_circle",
+      "task": "CIRCLE",
+      "expected_state": "DONE",
+      "actual_state": "DONE",
+      "expected_fault": "NONE",
+      "actual_fault": "NONE",
+      "elapsed_ticks": 1201,
+      "elapsed_seconds": 12.01,
+      "completed_laps": 1,
+      "status": "PASS"
+    },
+    {
+      "scenario": "fault_drive_no_feedback",
+      "task": "TRACK_N",
+      "expected_state": "FAULT",
+      "actual_state": "FAULT",
+      "expected_fault": "NO FB",
+      "actual_fault": "NO FB",
+      "elapsed_ticks": 200,
+      "elapsed_seconds": 2.0,
+      "completed_laps": 0,
+      "status": "PASS"
+    },
+    {
+      "scenario": "fault_k230_dropout",
+      "task": "MOVE_2",
+      "expected_state": "FAULT",
+      "actual_state": "FAULT",
+      "expected_fault": "K230 LOST",
+      "actual_fault": "K230 LOST",
+      "elapsed_ticks": 136,
+      "elapsed_seconds": 1.36,
+      "completed_laps": 0,
+      "status": "PASS"
+    },
+    {
+      "scenario": "abort_sw4_move_aim",
+      "task": "MOVE_1",
+      "expected_state": "ABORTED",
+      "actual_state": "ABORTED",
+      "expected_fault": "E-STOP",
+      "actual_fault": "E-STOP",
+      "elapsed_ticks": 80,
+      "elapsed_seconds": 0.8,
+      "completed_laps": 0,
+      "status": "PASS"
+    }
+  ]
+}

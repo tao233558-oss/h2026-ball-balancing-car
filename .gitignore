@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+**/Objects/
+**/Listings/
+**/DebugConfig/
+*.uvguix.*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+rebuild.log

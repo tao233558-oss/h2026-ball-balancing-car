@@ -1,0 +1,115 @@
+{
+  "result": "PASS",
+  "hardware_validation": "NOT_RUN",
+  "protocol_frame_bytes": 15,
+  "uart": "UART2 115200 8N1",
+  "mspm0_pins": {
+    "tx": "PB15",
+    "rx": "PA22"
+  },
+  "k230_header": {
+    "tx": "pin 11 / GPIO5",
+    "rx": "pin 13 / GPIO6"
+  },
+  "commands": {
+    "idle_track_terminal": "STOP",
+    "aim_move": "CENTER",
+    "draw_circle": "CIRCLE",
+    "heartbeat_ms": 1000
+  },
+  "integrated_safe_firmware": "output\\firmware\\car_final_ccs_e2025_k230_safe.out",
+  "integrated_safe_firmware_sha256": "0E53F2A9A952843B370548FB54F681BC52469423E693A995A74F53AFEC826DD3",
+  "streams": [
+    {
+      "name": "e2_center",
+      "frames": 40,
+      "bytes": 600,
+      "file": "output\\k230_e2025_end_to_end\\e2_center.bin"
+    },
+    {
+      "name": "e3_search_then_lock",
+      "frames": 40,
+      "bytes": 600,
+      "file": "output\\k230_e2025_end_to_end\\e3_search_then_lock.bin"
+    },
+    {
+      "name": "e4_e5_moving_center",
+      "frames": 120,
+      "bytes": 1800,
+      "file": "output\\k230_e2025_end_to_end\\e4_e5_moving_center.bin"
+    },
+    {
+      "name": "e6_circle",
+      "frames": 130,
+      "bytes": 1950,
+      "file": "output\\k230_e2025_end_to_end\\e6_circle.bin"
+    }
+  ],
+  "checks": [
+    {
+      "check": "K230, PC and MSPM0 reference encoders are byte-identical",
+      "result": "PASS"
+    },
+    {
+      "check": "E2 center stream reaches an aligned valid sample",
+      "result": "PASS"
+    },
+    {
+      "check": "E3 search stream transitions from invalid to valid target",
+      "result": "PASS"
+    },
+    {
+      "check": "E4/E5 moving-center stream remains connected across sequence flow",
+      "result": "PASS"
+    },
+    {
+      "check": "E6 circle stream completes one uninterrupted phase revolution",
+      "result": "PASS"
+    },
+    {
+      "check": "corrupt CRC is rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "sequence gap reports two missing frames",
+      "result": "PASS"
+    },
+    {
+      "check": "200 ms link timeout disconnects after the boundary",
+      "result": "PASS"
+    },
+    {
+      "check": "valid frame reconnects after timeout",
+      "result": "PASS"
+    },
+    {
+      "check": "MSPM0 maps E2-E5 to CENTER and E6 to CIRCLE",
+      "result": "PASS"
+    },
+    {
+      "check": "UART2 command transmission stays out of 10 ms ISR",
+      "result": "PASS"
+    },
+    {
+      "check": "K230 FPIOA uses GPIO5/GPIO6 for header pins 11/13",
+      "result": "PASS"
+    },
+    {
+      "check": "CIRCLE heartbeat does not reset an active circle",
+      "result": "PASS"
+    },
+    {
+      "check": "source defaults remain motor-safe with UART2 off",
+      "result": "PASS"
+    },
+    {
+      "check": "CCS connection remains XDS110",
+      "result": "PASS"
+    },
+    {
+      "check": "UART2 integrated safe firmware exists",
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

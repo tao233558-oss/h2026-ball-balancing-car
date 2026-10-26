@@ -1,0 +1,5 @@
+﻿interface,instance,tx,rx,baud,default_state,note
+CH340 debug,UART0,PA10,PA11,115200,enabled,Tianmengxing onboard CH340; do not share with K230
+IMU,UART1,PA8,PA9,9600,enabled,Existing IMU parser
+K230,UART2,PB15,PA22,115200,feature-gated off,K230 physical 11 TX -> PA22 RX; PB15 TX -> K230 physical 13 RX; physical 9 GND
+Bluetooth,UART3,PB2,PB3,module dependent,reserved; not initialized,Moved from conflicting PB4/PB5; confirm module baud before enable

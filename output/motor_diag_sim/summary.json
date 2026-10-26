@@ -1,0 +1,48 @@
+{
+  "tick_ms": 10,
+  "test_pwm": 600,
+  "arm_release_ms": 500,
+  "button_press_debounce_ms": 30,
+  "checks": {
+    "boot_with_run_held_never_starts": "PASS",
+    "requires_500ms_release_before_arm": "PASS",
+    "run_press_requires_debounce": "PASS",
+    "run_release_stops_same_tick": "PASS",
+    "only_selected_wheel_is_driven": "PASS",
+    "direction_change_ignored_while_running": "PASS",
+    "sw4_stops_same_tick_and_latches": "PASS",
+    "default_profile_remains_off": "PASS"
+  },
+  "examples": {
+    "left_forward": {
+      "armed": true,
+      "emergency": false,
+      "running": true,
+      "select_right": false,
+      "reverse": false,
+      "standby": 1,
+      "left_pwm": 600,
+      "right_pwm": 0
+    },
+    "right_reverse": {
+      "armed": true,
+      "emergency": false,
+      "running": true,
+      "select_right": true,
+      "reverse": true,
+      "standby": 1,
+      "left_pwm": 0,
+      "right_pwm": -600
+    },
+    "emergency": {
+      "armed": true,
+      "emergency": true,
+      "running": false,
+      "select_right": true,
+      "reverse": true,
+      "standby": 0,
+      "left_pwm": 0,
+      "right_pwm": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+tick,busy,driver_awake_allowed,laser_allowed,pan_step_active,tilt_step_active,pan_limit_blocked,tilt_limit_blocked,queue_overflow,reversal_deferred,pan_direction,tilt_direction,pan_pending_steps,tilt_pending_steps,pan_emitted_position_steps,tilt_emitted_position_steps,fault
+1,True,True,True,False,False,False,False,False,False,1,0,2,0,0,0,NONE
+2,True,True,True,False,False,False,False,False,False,1,0,2,0,0,0,NONE
+3,True,True,True,True,False,False,False,False,False,1,0,2,0,0,0,NONE
+4,True,True,True,False,False,False,False,False,False,1,0,2,0,0,0,NONE
+5,True,True,True,True,False,False,False,False,False,1,0,1,0,1,0,NONE
+6,True,True,True,False,False,False,False,False,False,1,0,1,0,1,0,NONE
+7,False,True,True,False,False,False,False,False,False,0,0,0,0,2,0,NONE

@@ -1,0 +1,35 @@
+{
+  "suite": "dcc100v3_integration_audit",
+  "status": "PASS",
+  "module_logic_level_v": 3.3,
+  "module_motor_supply_v": "11-26",
+  "new_recommended_pins": [
+    "PB4",
+    "PB5",
+    "PB17"
+  ],
+  "physical_limit_switches_present": false,
+  "position_reference": "power_on_relative_zero_only",
+  "hardware_gpio_bound": false,
+  "diagnostic_gpio_bound": true,
+  "diagnostic_profile_default_enabled": false,
+  "checks": [
+    "dcc100v3_manual_present",
+    "all_vendor_example_control_pins_conflict_with_current_car",
+    "runtime_gpio_backend_remains_disabled",
+    "physical_limit_switches_confirmed_absent",
+    "dcc_sleep_wake_permission_is_logical_only",
+    "normal_e2025_runtime_has_no_direct_dcc_gpio_init",
+    "low_speed_dual_axis_diagnostic_profile_present",
+    "integration_guide_contains_recommended_pin_plan"
+  ],
+  "remaining_confirmations": [
+    "latest_pcb_routes_pb4_pb5_pb17_to_dcc100v3",
+    "laser_enable_pin_and_active_polarity",
+    "scope_check_of_pwm_dir_sleep_timing"
+  ],
+  "accepted_risks": [
+    "no_automatic_homing_or_absolute_mechanical_reference",
+    "relative_soft_limits_can_drift_after_missed_steps_or_obstruction"
+  ]
+}

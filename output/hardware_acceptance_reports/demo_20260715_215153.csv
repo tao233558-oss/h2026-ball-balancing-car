@@ -1,0 +1,5 @@
+﻿timestamp,key_raw,key_pass,key_pass_count,track_black,track_pass,track_pass_count,enc_l,enc_r,left_encoder_pass,right_encoder_pass,motor,stby,outputs_safe,k230,result,verdict
+2026-07-15T21:51:53.649+08:00,0x00,0x00,0,0x00,0x00,0,0,0,False,False,0,0,True,BLOCKED_NO_DEDICATED_UART,TESTING,INCOMPLETE
+2026-07-15T21:51:53.649+08:00,0x01,0x01,1,0x00,0x00,0,0,0,False,False,0,0,True,BLOCKED_NO_DEDICATED_UART,TESTING,INCOMPLETE
+2026-07-15T21:51:53.650+08:00,0x00,0x0F,4,0x18,0x3F,6,2,0,False,False,0,0,True,BLOCKED_NO_DEDICATED_UART,TESTING,INCOMPLETE
+2026-07-15T21:51:53.650+08:00,0x00,0x0F,4,0x00,0xFF,8,12,9,True,True,0,0,True,BLOCKED_NO_DEDICATED_UART,INPUT_PASS,INPUT_PASS_K230_BLOCKED

@@ -1,0 +1,8 @@
+# tools/train_yolov8.py materializes an absolute runtime copy before training.
+path: .
+train: images/train
+val: images/val
+test:
+
+names:
+  0: steel_ball

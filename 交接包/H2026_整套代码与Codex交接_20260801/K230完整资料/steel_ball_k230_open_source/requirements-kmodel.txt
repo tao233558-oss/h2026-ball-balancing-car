@@ -1,0 +1,9 @@
+# nncase 2.11 matches the current CanMV AI development documentation.
+# On Windows, nncase-kpu must be installed from the matching official wheel:
+# https://github.com/kendryte/nncase/releases
+nncase==2.11.0
+onnx>=1.15,<2
+onnxruntime>=1.19,<2
+# On Windows use tools/setup_kmodel_windows.ps1 to install the matching
+# nncase-kpu wheel. tools/onnxsim.py provides the Python 3.12 compatibility
+# layer required by the official conversion example.

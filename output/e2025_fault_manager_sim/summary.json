@@ -1,0 +1,41 @@
+{
+  "suite": "e2025_fault_manager",
+  "control_tick_ms": 10,
+  "motor_shutdown_latency_ticks": 0,
+  "state_fault_latency_ticks": 1,
+  "hardware_verified": false,
+  "cases": [
+    {
+      "case": "all_drive_faults_map_to_e2025_codes",
+      "status": "PASS"
+    },
+    {
+      "case": "drive_stops_now_and_state_faults_next_tick",
+      "status": "PASS"
+    },
+    {
+      "case": "k230_loss_requires_frame_seen_in_session",
+      "status": "PASS"
+    },
+    {
+      "case": "track_only_task_ignores_k230_link",
+      "status": "PASS"
+    },
+    {
+      "case": "aim_estop_maps_to_specific_fault",
+      "status": "PASS"
+    },
+    {
+      "case": "raw_sw4_abort_keeps_visible_estop_reason",
+      "status": "PASS"
+    },
+    {
+      "case": "new_session_does_not_inherit_k230_seen",
+      "status": "PASS"
+    },
+    {
+      "case": "firmware_fault_propagation_markers",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+/* Saved binary-v2 UART diagnostic; teammate K230 uses ASCII instead. */
+#include "board.h"
+#include "bsp_motor.h"
+#include "bsp_stepper.h"
+#include "bsp_vision_uart.h"
+#include "h2026_uart_protocol_v2.h"
+#include "oled.h"
+
+#define MAIN_LOOP_PERIOD_MS       1U
+#define OLED_UPDATE_PERIOD_MS    100U
+#define VISION_LINK_TIMEOUT_MS   150U
+#define BALL_VALID_TIMEOUT_MS    150U
+
+static void heartbeat_led_init(void)
+{
+    GPIO_InitTypeDef gpio;
+
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+    gpio.GPIO_Pin = GPIO_Pin_2;
+    gpio.GPIO_Mode = GPIO_Mode_OUT;
+    gpio.GPIO_OType = GPIO_OType_PP;
+    gpio.GPIO_Speed = GPIO_Speed_50MHz;
+    gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOB, &gpio);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_2);
+}
+
+static void oled_show_padded_line(uint8_t y, const uint8_t *text)
+{
+    uint8_t line[22];
+    uint8_t index;
+
+    for(index = 0U; index < 21U; index++)
+    {
+        line[index] = (uint8_t)' ';
+    }
+    index = 0U;
+    while((index < 21U) && (text[index] != (uint8_t)'\0'))
+    {
+        line[index] = text[index];
+        index++;
+    }
+    line[21] = (uint8_t)'\0';
+    OLED_ShowString(0U, y, line, 8U, 1U);
+}
+
+static void format_unsigned(uint8_t *line,
+                            uint8_t start,
+                            uint32_t value,
+                            uint8_t digits)
+{
+    uint8_t index;
+
+    for(index = 0U; index < digits; index++)
+    {
+        uint8_t output =
+            (uint8_t)(start + digits - 1U - index);
+        line[output] = (uint8_t)('0' + (value % 10U));
+        value /= 10U;
+    }
+}
+
+static void format_signed(uint8_t *line,
+                          uint8_t sign_index,
+                          int32_t value,
+                          uint8_t digits)
+{
+    uint32_t magnitude;
+
+    if(value < 0)
+    {
+        line[sign_index] = (uint8_t)'-';
+        magnitude = (uint32_t)(-value);
+    }
+    else
+    {
+        line[sign_index] = (uint8_t)'+';
+        magnitude = (uint32_t)value;
+    }
+    format_unsigned(line,
+                    (uint8_t)(sign_index + 1U),
+                    magnitude,
+                    digits);
+}
+
+static uint32_t elapsed_ms(uint32_t now, uint32_t previous)
+{
+    return now - previous;
+}
+
+static void show_vision_state(
+    const h2026_vision_sample_t *sample,
+    uint8_t link_ok,
+    uint8_t ball_valid,
+    uint32_t good_frames,
+    uint32_t bad_frames,
+    uint32_t age_ms)
+{
+    uint8_t x_line[] = "X:+0000mm V:0 L:0";
+    uint8_t count_line[] = "OK:00000 ER:00000";
+    uint8_t age_line[] = "AGE:000ms F:00000";
+
+    format_signed(x_line, 2U, sample->x_mm, 4U);
+    x_line[12] = (ball_valid != 0U) ? (uint8_t)'1' : (uint8_t)'0';
+    x_line[16] = (link_ok != 0U) ? (uint8_t)'1' : (uint8_t)'0';
+
+    format_unsigned(count_line, 3U, good_frames % 100000U, 5U);
+    format_unsigned(count_line, 12U, bad_frames % 100000U, 5U);
+
+    if(age_ms > 999U)
+    {
+        age_ms = 999U;
+    }
+    format_unsigned(age_line, 4U, age_ms, 3U);
+    format_unsigned(age_line, 12U, sample->frame_id, 5U);
+
+    oled_show_padded_line(0U, (uint8_t *)"K230 TO F407 V2");
+    oled_show_padded_line(16U, x_line);
+    oled_show_padded_line(32U, count_line);
+    oled_show_padded_line(48U, age_line);
+    OLED_Refresh();
+}
+
+int main(void)
+{
+    h2026_parser_t parser;
+    h2026_frame_t frame;
+    h2026_vision_sample_t sample = {0};
+    uint32_t now_ms = 0U;
+    uint32_t last_packet_ms = 0U;
+    uint32_t last_valid_ms = 0U;
+    uint32_t good_frames = 0U;
+    uint32_t bad_frames = 0U;
+    uint32_t next_oled_ms = 0U;
+    uint32_t heartbeat_ms = 0U;
+    uint8_t have_packet = 0U;
+    uint8_t have_valid = 0U;
+
+    board_init();
+    heartbeat_led_init();
+    motor_init_safe();
+    motor_all_stop();
+    stepper_init_safe();
+    stepper_emergency_stop();
+    OLED_Init();
+    OLED_Clear();
+
+    h2026_parser_init(&parser);
+    vision_uart_init(115200U);
+    show_vision_state(&sample, 0U, 0U, 0U, 0U, 999U);
+
+    while(1)
+    {
+        uint8_t byte;
+
+        while(vision_uart_read_byte(&byte) != 0U)
+        {
+            h2026_parse_result_t result =
+                h2026_parser_feed(&parser, byte, now_ms, &frame);
+
+            if(result == H2026_PARSE_FRAME_OK)
+            {
+                h2026_vision_sample_t decoded;
+
+                if(h2026_unpack_vision_sample(&frame, &decoded))
+                {
+                    sample = decoded;
+                    good_frames++;
+                    have_packet = 1U;
+                    last_packet_ms = now_ms;
+
+                    if(((decoded.flags & H2026_VISION_VALID) != 0U) &&
+                       (decoded.sample_age_ms <= 120U))
+                    {
+                        have_valid = 1U;
+                        last_valid_ms = now_ms;
+                    }
+                }
+                else
+                {
+                    bad_frames++;
+                }
+            }
+            else if(result == H2026_PARSE_FRAME_BAD)
+            {
+                bad_frames++;
+            }
+        }
+
+        if(vision_uart_get_overflow_count() != 0U)
+        {
+            bad_frames = parser.bad_frame_count +
+                         vision_uart_get_overflow_count();
+        }
+
+        if(now_ms >= next_oled_ms)
+        {
+            uint8_t link_ok =
+                ((have_packet != 0U) &&
+                 (elapsed_ms(now_ms, last_packet_ms) <=
+                  VISION_LINK_TIMEOUT_MS)) ? 1U : 0U;
+            uint8_t ball_valid =
+                ((have_valid != 0U) &&
+                 (elapsed_ms(now_ms, last_valid_ms) <=
+                  BALL_VALID_TIMEOUT_MS)) ? 1U : 0U;
+            uint32_t age =
+                (have_packet != 0U) ?
+                elapsed_ms(now_ms, last_packet_ms) :
+                999U;
+
+            show_vision_state(&sample,
+                              link_ok,
+                              ball_valid,
+                              good_frames,
+                              bad_frames,
+                              age);
+            next_oled_ms = now_ms + OLED_UPDATE_PERIOD_MS;
+        }
+
+        delay_ms(MAIN_LOOP_PERIOD_MS);
+        now_ms += MAIN_LOOP_PERIOD_MS;
+        heartbeat_ms += MAIN_LOOP_PERIOD_MS;
+        if(heartbeat_ms >= 500U)
+        {
+            GPIO_ToggleBits(GPIOB, GPIO_Pin_2);
+            heartbeat_ms = 0U;
+        }
+    }
+}

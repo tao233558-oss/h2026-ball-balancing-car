@@ -1,0 +1,12 @@
+LushanPi K230 v1.6 YOLO11 + WBC RTSP log
+Program started
+Board: (sysname='rt-smart', nodename='rt-smart', release='v1.6-e4441cc', version='v1.6 on 2026-04-03', machine='k230_canmv_lckfb')
+YOLO11 model: /sdcard/yolo11_gq_320.kmodel
+YOLO11 labels: ['GQ']
+Camera and ST7701 pipeline started
+WiFi AP configured: LushanPi_RTSP
+WiFi AP info: {"ssid":"LushanPi_RTSP", "bssid":A4:E8:8D:1A:B3:A1, "channel":6, "rssi":0, "security":"SECURITY_WPA2_AES_PSK", "band":"2.4G", "hidden":0}
+WiFi AP status: True
+VLC URL: rtsp://192.168.169.1:8554/test
+WBC H264 RTSP started: 20 fps, 1200 kbps, GOP 20
+YOLO11 initialized

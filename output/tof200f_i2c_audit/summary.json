@@ -1,0 +1,200 @@
+{
+  "result": "PASS",
+  "hardware_validation": "NOT_RUN",
+  "bus": {
+    "scl": "PB0",
+    "sda": "PB1",
+    "open_drain": true
+  },
+  "vl53l0x_address_7bit": "0x29",
+  "expected_model_id": "0xEEAA",
+  "firmware_sha256": "D485FDEF2B9EFA056127E93CFF6C89C79859585A07D1D11C8CA59FE3A2A51845",
+  "checks": [
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "check": "#define I2C_SCL              PB0",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "check": "#define I2C_SDA              PB1",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "check": "I2C_WriteBuffer",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.h",
+      "check": "I2C_ReadBuffer",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "check": "DL_GPIO_disableOutput(I2C_GPIO, pin)",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "check": "I2C_CLOCK_HIGH_TIMEOUT_US",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "check": "I2C_WaitAck",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "check": "TOF200F_I2C_ADDRESS_8BIT 0x52U",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "check": "TOF200F_EXPECTED_MODEL_ID 0xEEAAU",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "check": "tof200f_start_continuous",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.h",
+      "check": "tof200f_poll_mm",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_DataInit",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_PerformRefCalibration",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_PerformRefSpadManagement",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_PerformSingleRangingMeasurement",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_GetMeasurementDataReady",
+      "result": "PASS"
+    },
+    {
+      "file": "user/tof200f.c",
+      "check": "VL53L0X_ClearInterruptMask",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "Wiring: PB0=SCL, PB1=SDA",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "01 06 00 09 00 01 98 08",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "tof200f_read_mm",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "e2025_tof_runtime_service",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "e2025_tof_snapshot_tick",
+      "result": "PASS"
+    },
+    {
+      "file": "car_final_ccs.projectspec",
+      "check": "user/tof200f.c",
+      "result": "PASS"
+    },
+    {
+      "file": "car_final_ccs.projectspec",
+      "check": "user/e2025_tof_adapter.c",
+      "result": "PASS"
+    },
+    {
+      "file": "car_final_ccs.projectspec",
+      "check": "vl53l0x/core/src/vl53l0x_api.c",
+      "result": "PASS"
+    },
+    {
+      "file": "car_final_ccs.projectspec",
+      "check": "vl53l0x/platform/vl53l0x_platform.c",
+      "result": "PASS"
+    },
+    {
+      "file": "car_final_ccs.projectspec",
+      "check": "TIXDS110_Connection.xml",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "forbidden: tof_uart_init",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "forbidden: TOF wiring: PB04",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "forbidden: PB05(RX)<-TOF TX",
+      "result": "PASS"
+    },
+    {
+      "file": "ml_libs/ml_i2c.c",
+      "check": "forbidden: gpio_set(I2C_GPIO, pin, 1U)",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: tof200f_init",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: tof200f_read_mm",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: tof200f_poll_mm",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: VL53L0X_",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: delay_ms",
+      "result": "PASS"
+    },
+    {
+      "file": "user/main.c",
+      "check": "ISR forbidden: delay_us",
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}

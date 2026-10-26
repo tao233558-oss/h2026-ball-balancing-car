@@ -1,0 +1,38 @@
+{
+  "suite": "e2025_drive_adapter",
+  "outer_tick_ms": 10,
+  "inner_sample_ms": 100,
+  "feature_enabled_in_default_firmware": false,
+  "hardware_verified": false,
+  "target_counts_are_placeholders": true,
+  "cases": [
+    {
+      "case": "disabled_is_zero_and_does_not_latch_estop",
+      "status": "PASS"
+    },
+    {
+      "case": "ten_10ms_ticks_form_one_100ms_sample",
+      "status": "PASS"
+    },
+    {
+      "case": "corner_zero_target_stops_wheel_same_tick",
+      "status": "PASS"
+    },
+    {
+      "case": "zero_target_is_ignored_by_feedback_guard",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_feedback_latches_and_stops",
+      "status": "PASS"
+    },
+    {
+      "case": "sw4_estop_is_same_tick_and_latched",
+      "status": "PASS"
+    },
+    {
+      "case": "firmware_gate_and_safety_markers",
+      "status": "PASS"
+    }
+  ]
+}

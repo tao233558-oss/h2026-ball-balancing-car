@@ -1,0 +1,12 @@
+﻿pin,function,endpoint,sharing
+PA10,UART0_TX,CH340 debug,dedicated
+PA11,UART0_RX,CH340 debug,dedicated
+PA8,UART1_TX,IMU,dedicated
+PA9,UART1_RX,IMU,dedicated
+PB15,UART2_TX,K230,dedicated
+PA22,UART2_RX,K230,dedicated
+PB2,UART3_TX,Bluetooth,dedicated
+PB3,UART3_RX,Bluetooth,dedicated
+PB0,software I2C SCL,OLED + TOF200F,shared bus i2c0_soft
+PB1,software I2C SDA,OLED + TOF200F,shared bus i2c0_soft
+PB25,GPIO input,track D7 / R3,dedicated

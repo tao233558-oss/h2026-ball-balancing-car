@@ -1,0 +1,12 @@
+# Preserve the archived bytes and manifest hashes exactly.
+* -text
+*.c.saved linguist-language=C
+**/libraries/** linguist-vendored
+**/m0_sdk/** linguist-vendored
+**/Drivers/** linguist-vendored
+**/CMSIS/** linguist-vendored
+**/models/** linguist-generated
+*.log linguist-generated
+*.hex linguist-generated
+*.axf linguist-generated
+docs/archive/*.csv linguist-generated

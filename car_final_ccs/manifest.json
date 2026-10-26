@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "name": "car_final_ccs",
+  "title": "Tianmengxing Competition Car CCS Migration",
+  "description": "Keil ArmClang MSPM0G3507 car firmware migrated to CCS TI-Clang with Tianmengxing-safe pin remapping.",
+  "board": "Tianmengxing MSPM0G3507",
+  "device": "MSPM0G3507",
+  "package": "LQFP-64",
+  "sdk": "MSPM0 SDK 2.00.01.00",
+  "validated": false,
+  "validation_level": "ccs_ticlang_build",
+  "complexity": "framework_multi_module",
+  "clock": {
+    "cpuclk_hz": 80000000,
+    "notes": "Legacy runtime clock initialization retained in ml_libs/ml_system.c."
+  },
+  "peripherals": ["GPIO", "PWM", "TIMER", "UART", "SYSTICK", "I2C"],
+  "source_dirs": ["user", "code", "ml_libs"],
+  "syscfg": "car_final_ccs.syscfg",
+  "connection": "XDS110",
+  "tags": ["tianmengxing", "mspm0g3507", "car", "ccs", "migration"]
+}

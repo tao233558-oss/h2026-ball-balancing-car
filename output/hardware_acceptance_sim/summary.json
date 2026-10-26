@@ -1,0 +1,31 @@
+{
+  "tick_ms": 10,
+  "key_debounce_ms": 30,
+  "encoder_min_activity": 4,
+  "final": {
+    "key_pass_mask": "0x0F",
+    "track_pass_mask": "0xFF",
+    "left_encoder_activity": 4,
+    "right_encoder_activity": 4,
+    "motor_pwm_left": 0,
+    "motor_pwm_right": 0,
+    "standby": 0,
+    "k230": "BLOCKED_UART2_UNVERIFIED",
+    "inputs_pass": true
+  },
+  "checks": {
+    "white_baseline_seen": "PASS",
+    "single_tick_key_noise_rejected": "PASS",
+    "all_four_keys_pass": "PASS",
+    "all_track_channels_see_white_and_black": "PASS",
+    "encoder_threshold_rejects_tiny_activity": "PASS",
+    "both_encoder_channels_pass": "PASS",
+    "actuators_remain_disabled": "PASS",
+    "k230_not_falsely_reported_as_pass": "PASS",
+    "acceptance_profile_default_off": "PASS",
+    "main_has_acceptance_entry": "PASS",
+    "firmware_reasserts_safe_motor_outputs": "PASS",
+    "unverified_outputs_are_explicitly_blocked": "PASS",
+    "ccs_projectspec_includes_acceptance_source": "PASS"
+  }
+}

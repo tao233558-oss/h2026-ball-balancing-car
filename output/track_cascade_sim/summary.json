@@ -1,0 +1,41 @@
+{
+  "suite": "track_outer_plus_wheel_pi_inner",
+  "outer_tick_ms": 10,
+  "inner_sample_ms": 100,
+  "target_counts_are_placeholders": true,
+  "hardware_verified": false,
+  "target_limits": {
+    "minimum_follow": 7,
+    "maximum": 13
+  },
+  "cases": [
+    {
+      "case": "outer_loop_direction",
+      "status": "PASS"
+    },
+    {
+      "case": "single_tick_noise_bounded_and_recovers",
+      "status": "PASS"
+    },
+    {
+      "case": "lost_line_and_corner_targets",
+      "status": "PASS"
+    },
+    {
+      "case": "target_aware_encoder_guard",
+      "status": "PASS"
+    },
+    {
+      "case": "joint_outer_inner_replay",
+      "status": "PASS",
+      "final_left_counts": 10,
+      "final_right_counts": 10,
+      "final_left_pwm": 582,
+      "final_right_pwm": 636
+    },
+    {
+      "case": "firmware_source_isolated_safe",
+      "status": "PASS"
+    }
+  ]
+}

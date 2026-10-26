@@ -1,0 +1,61 @@
+{
+  "suite": "dual_motor_diag_safety",
+  "tick_ms": 10,
+  "sample_ms": 100,
+  "pwm": 600,
+  "hardware_verified": false,
+  "cases": [
+    {
+      "case": "boot_held_sw2_never_starts",
+      "status": "PASS"
+    },
+    {
+      "case": "released_500ms_arms",
+      "status": "PASS"
+    },
+    {
+      "case": "matched_feedback_keeps_running",
+      "status": "PASS"
+    },
+    {
+      "case": "raw_sw2_release_stops_same_tick",
+      "status": "PASS"
+    },
+    {
+      "case": "both_encoders_missing_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "left_encoder_missing_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "right_encoder_missing_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "sustained_speed_mismatch_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "left_wrong_direction_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "right_wrong_direction_latches",
+      "status": "PASS"
+    },
+    {
+      "case": "reverse_negative_feedback_is_valid",
+      "status": "PASS"
+    },
+    {
+      "case": "sw4_same_tick_latched_stop",
+      "status": "PASS"
+    },
+    {
+      "case": "firmware_source_safety_markers",
+      "status": "PASS"
+    }
+  ]
+}

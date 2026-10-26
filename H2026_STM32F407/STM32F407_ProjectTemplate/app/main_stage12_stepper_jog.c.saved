@@ -1,0 +1,194 @@
+/* Saved stage 12 manual stepper direction/zero diagnostic. */
+#include "board.h"
+#include "bsp_keys.h"
+#include "bsp_motor.h"
+#include "bsp_stepper.h"
+#include "oled.h"
+
+#define JOG_SPEED_STEPS_S     250
+#define DISPLAY_PERIOD_MS     100U
+#define LOOP_PERIOD_MS        10U
+
+static void heartbeat_led_init(void)
+{
+    GPIO_InitTypeDef gpio;
+
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+    gpio.GPIO_Pin = GPIO_Pin_2;
+    gpio.GPIO_Mode = GPIO_Mode_OUT;
+    gpio.GPIO_OType = GPIO_OType_PP;
+    gpio.GPIO_Speed = GPIO_Speed_50MHz;
+    gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOB, &gpio);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_2);
+}
+
+static void oled_show_padded_line(uint8_t y, const uint8_t *text)
+{
+    uint8_t line[22];
+    uint8_t index;
+
+    for(index = 0U; index < 21U; index++)
+    {
+        line[index] = (uint8_t)' ';
+    }
+    index = 0U;
+    while((index < 21U) && (text[index] != (uint8_t)'\0'))
+    {
+        line[index] = text[index];
+        index++;
+    }
+    line[21] = (uint8_t)'\0';
+    OLED_ShowString(0U, y, line, 8U, 1U);
+}
+
+static void format_signed_value(uint8_t *line,
+                                uint8_t sign_index,
+                                int32_t value,
+                                uint8_t digits)
+{
+    uint32_t magnitude;
+    uint8_t index;
+
+    if(value < 0)
+    {
+        line[sign_index] = (uint8_t)'-';
+        magnitude = (uint32_t)(-value);
+    }
+    else
+    {
+        line[sign_index] = (uint8_t)'+';
+        magnitude = (uint32_t)value;
+    }
+
+    for(index = 0U; index < digits; index++)
+    {
+        uint8_t output_index =
+            (uint8_t)(sign_index + digits - index);
+        line[output_index] =
+            (uint8_t)('0' + (magnitude % 10U));
+        magnitude /= 10U;
+    }
+}
+
+static void show_stepper_state(const uint8_t *state)
+{
+    uint8_t state_line[] = "STATE:             ";
+    uint8_t position_line[] = "POS:+000000 SPD:+0000";
+    uint8_t index = 0U;
+
+    while((index < 12U) && (state[index] != (uint8_t)'\0'))
+    {
+        state_line[6U + index] = state[index];
+        index++;
+    }
+
+    format_signed_value(position_line,
+                        4U,
+                        stepper_get_position(),
+                        6U);
+    format_signed_value(position_line,
+                        16U,
+                        stepper_get_speed(),
+                        4U);
+
+    oled_show_padded_line(0U, (uint8_t *)"BALANCE STEP TEST");
+    oled_show_padded_line(16U, state_line);
+    oled_show_padded_line(32U, position_line);
+    oled_show_padded_line(48U, (uint8_t *)"1:+ 2:- 3:ZERO 4:OFF");
+    OLED_Refresh();
+}
+
+int main(void)
+{
+    uint8_t key_mask;
+    uint8_t key_edges;
+    uint8_t previous_key_mask = 0U;
+    uint8_t enabled = 0U;
+    const uint8_t *state = (uint8_t *)"SLEEP";
+    uint16_t display_ms = 0U;
+    uint16_t heartbeat_ms = 0U;
+
+    board_init();
+    heartbeat_led_init();
+    keys_init();
+    motor_init_safe();
+    motor_all_stop();
+    stepper_init_safe();
+    OLED_Init();
+    OLED_Clear();
+    show_stepper_state(state);
+
+    while(1)
+    {
+        key_mask = keys_read_pressed_mask();
+        key_edges =
+            (uint8_t)(key_mask & (uint8_t)(~previous_key_mask));
+        previous_key_mask = key_mask;
+
+        if((key_mask & KEY_SW4_MASK) != 0U)
+        {
+            stepper_emergency_stop();
+            enabled = 0U;
+            state = (uint8_t *)"SLEEP";
+        }
+        else if((key_edges & KEY_SW3_MASK) != 0U)
+        {
+            if(enabled == 0U)
+            {
+                stepper_enable(1U);
+                delay_ms(3U);
+                enabled = 1U;
+            }
+            stepper_set_speed(0);
+            stepper_set_position(0);
+            state = (uint8_t *)"ZERO SET";
+        }
+        else if(((key_mask & KEY_SW1_MASK) != 0U) &&
+                ((key_mask & KEY_SW2_MASK) == 0U))
+        {
+            if(enabled == 0U)
+            {
+                stepper_enable(1U);
+                delay_ms(3U);
+                enabled = 1U;
+            }
+            stepper_set_speed(JOG_SPEED_STEPS_S);
+            state = (uint8_t *)"DIR PLUS";
+        }
+        else if(((key_mask & KEY_SW2_MASK) != 0U) &&
+                ((key_mask & KEY_SW1_MASK) == 0U))
+        {
+            if(enabled == 0U)
+            {
+                stepper_enable(1U);
+                delay_ms(3U);
+                enabled = 1U;
+            }
+            stepper_set_speed(-JOG_SPEED_STEPS_S);
+            state = (uint8_t *)"DIR MINUS";
+        }
+        else
+        {
+            stepper_set_speed(0);
+            state = (enabled != 0U) ?
+                    (uint8_t *)"HOLD" :
+                    (uint8_t *)"SLEEP";
+        }
+
+        delay_ms(LOOP_PERIOD_MS);
+        display_ms = (uint16_t)(display_ms + LOOP_PERIOD_MS);
+        heartbeat_ms = (uint16_t)(heartbeat_ms + LOOP_PERIOD_MS);
+
+        if(display_ms >= DISPLAY_PERIOD_MS)
+        {
+            show_stepper_state(state);
+            display_ms = 0U;
+        }
+        if(heartbeat_ms >= 500U)
+        {
+            GPIO_ToggleBits(GPIOB, GPIO_Pin_2);
+            heartbeat_ms = 0U;
+        }
+    }
+}

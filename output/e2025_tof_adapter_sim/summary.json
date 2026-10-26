@@ -1,0 +1,68 @@
+{
+  "result": "PASS",
+  "hardware_validation": "NOT_RUN",
+  "poll_period_ms": 50,
+  "stale_timeout_ms": 500,
+  "task_behavior_changed": false,
+  "integrated_safe_firmware": "output\\firmware\\car_final_ccs_e2025_tof_safe.out",
+  "integrated_safe_firmware_sha256": "73F3B0AEF359DD98F4BF82DA72B4B77F21B3DB48899E8FE4AB998D1F993DAD2F",
+  "checks": [
+    {
+      "check": "initial sample is unavailable",
+      "result": "PASS"
+    },
+    {
+      "check": "valid sample is fresh and preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "unchanged sample ages without becoming fresh",
+      "result": "PASS"
+    },
+    {
+      "check": "VL53L0X range status invalidates distance",
+      "result": "PASS"
+    },
+    {
+      "check": "sample becomes invalid after 500 ms timeout",
+      "result": "PASS"
+    },
+    {
+      "check": "I2C error is present but invalid",
+      "result": "PASS"
+    },
+    {
+      "check": "ISR reads adapter snapshot",
+      "result": "PASS"
+    },
+    {
+      "check": "ISR contains no blocking TOF operation",
+      "result": "PASS"
+    },
+    {
+      "check": "main loop owns nonblocking TOF polling",
+      "result": "PASS"
+    },
+    {
+      "check": "TOF remains telemetry-only in task decisions",
+      "result": "PASS"
+    },
+    {
+      "check": "CCS project includes TOF adapter",
+      "result": "PASS"
+    },
+    {
+      "check": "source defaults remain motor-safe with TOF off",
+      "result": "PASS"
+    },
+    {
+      "check": "CCS connection remains XDS110",
+      "result": "PASS"
+    },
+    {
+      "check": "integrated safe firmware exists",
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

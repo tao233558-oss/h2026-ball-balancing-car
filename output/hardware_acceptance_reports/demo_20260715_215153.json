@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": "replay:E:\\咸鱼24电赛h\\自动行驶小车_代码工程\\电赛小车终极版（最终版)\\offline_tools\\fixtures\\hardware_acceptance_sample.log",
+  "started_at": "2026-07-15T21:51:53+08:00",
+  "ended_at": "2026-07-15T21:51:53+08:00",
+  "sample_count": 4,
+  "ignored_line_count": 1,
+  "parse_errors": [],
+  "final_sample": {
+    "timestamp": "2026-07-15T21:51:53.650+08:00",
+    "key_raw": 0,
+    "key_pass": 15,
+    "track_black": 0,
+    "track_pass": 255,
+    "enc_l": 12,
+    "enc_r": 9,
+    "motor": 0,
+    "stby": 0,
+    "k230": "BLOCKED_NO_DEDICATED_UART",
+    "result": "INPUT_PASS",
+    "raw_line": "HWACC KEY_RAW=0x00 KEY_PASS=0x0F TRACK_BLACK=0x00 TRACK_PASS=0xFF ENC_L=12 ENC_R=9 MOTOR=0 STBY=0 K230=BLOCKED_NO_DEDICATED_UART RESULT=INPUT_PASS"
+  },
+  "final_status": {
+    "keys": {
+      "SW1": true,
+      "SW2": true,
+      "SW3": true,
+      "SW4": true
+    },
+    "key_pass_count": 4,
+    "track": {
+      "D1": true,
+      "D2": true,
+      "D3": true,
+      "D4": true,
+      "D5": true,
+      "D6": true,
+      "D7": true,
+      "D8": true
+    },
+    "track_pass_count": 8,
+    "left_encoder_pass": true,
+    "right_encoder_pass": true,
+    "outputs_safe": true,
+    "inputs_pass": true,
+    "k230_blocked": true,
+    "verdict": "INPUT_PASS_K230_BLOCKED"
+  },
+  "scope_note": "PASS only covers keys, track inputs, encoder activity and disabled outputs; K230, motors, pan/tilt and laser still require later hardware tests."
+}

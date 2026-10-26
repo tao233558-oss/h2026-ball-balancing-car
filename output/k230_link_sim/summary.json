@@ -1,0 +1,39 @@
+{
+  "suite": "k230_link",
+  "frame_bytes": 15,
+  "tick_ms": 10,
+  "link_timeout_ms": 200,
+  "uart0_bridge_enabled_in_default_firmware": false,
+  "dedicated_uart_pins_selected": false,
+  "hardware_verified": false,
+  "cases": [
+    {
+      "case": "fragmented_frame_publishes_only_after_crc",
+      "status": "PASS"
+    },
+    {
+      "case": "noise_then_sync_resynchronizes",
+      "status": "PASS"
+    },
+    {
+      "case": "bad_crc_counted_without_poisoning_next_frame",
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate_sequence_counted",
+      "status": "PASS"
+    },
+    {
+      "case": "gap_restart_and_wrap_accounting",
+      "status": "PASS"
+    },
+    {
+      "case": "link_timeout_and_reconnect",
+      "status": "PASS"
+    },
+    {
+      "case": "uart_independent_firmware_boundary",
+      "status": "PASS"
+    }
+  ]
+}

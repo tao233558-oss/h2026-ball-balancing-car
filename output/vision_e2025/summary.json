@@ -1,0 +1,12 @@
+{
+  "cases": 40,
+  "target_detection_rate": 1.0,
+  "spot_detection_rate": 1.0,
+  "target_center_error_px_mean": 1.3820048642912872,
+  "target_center_error_px_max": 4.798276908401999,
+  "laser_spot_error_px_mean": 0.3828915173220052,
+  "laser_spot_error_px_max": 0.6631379507392942,
+  "no_target_rejected": true,
+  "missing_spot_rejected": true,
+  "sample_protocol_frame": "AA 55 01 00 03 92 02 62 01 CE 02 9F 01 00 2E"
+}

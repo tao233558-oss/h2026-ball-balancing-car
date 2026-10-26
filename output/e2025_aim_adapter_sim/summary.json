@@ -1,0 +1,48 @@
+{
+  "suite": "e2025_aim_adapter",
+  "tick_ms": 10,
+  "vision_timeout_ms": 100,
+  "maximum_steps_per_axis_per_tick": 4,
+  "soft_limit_steps_from_power_on_origin": 2000,
+  "feature_enabled_in_default_firmware": false,
+  "physical_gpio_connected": false,
+  "hardware_verified": false,
+  "cases": [
+    {
+      "case": "disabled_is_zero_and_menu_sw4_does_not_latch",
+      "status": "PASS"
+    },
+    {
+      "case": "cached_frame_cannot_start_new_session",
+      "status": "PASS"
+    },
+    {
+      "case": "fresh_valid_frame_produces_bounded_steps",
+      "status": "PASS"
+    },
+    {
+      "case": "small_command_uses_fractional_step_accumulator",
+      "status": "PASS"
+    },
+    {
+      "case": "vision_watchdog_stops_after_100ms_without_new_frame",
+      "status": "PASS"
+    },
+    {
+      "case": "target_and_spot_must_both_be_valid",
+      "status": "PASS"
+    },
+    {
+      "case": "soft_limit_blocks_outward_but_allows_return",
+      "status": "PASS"
+    },
+    {
+      "case": "sw4_estop_is_same_tick_and_latched",
+      "status": "PASS"
+    },
+    {
+      "case": "firmware_gate_and_no_gpio_markers",
+      "status": "PASS"
+    }
+  ]
+}

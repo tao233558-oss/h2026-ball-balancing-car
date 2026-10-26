@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "hardware_validation": "NOT_RUN",
+  "scenes": 40,
+  "circle_points": 640,
+  "projective_center_error_px_max": 3.204891835799072e-05,
+  "projective_circle_error_px_max": 5.8925902432856946e-05,
+  "circle_radius_error_mm_max": 3.3038708473043243e-05,
+  "new_circle_error_px_mean": 1.6549900842074954e-05,
+  "former_affine_circle_error_px_mean": 9.618894201317566,
+  "color_thresholds": "REQUIRES_REAL_CAMERA_CALIBRATION",
+  "checks": [
+    {
+      "check": "projective A4 center matches OpenCV",
+      "result": "PASS"
+    },
+    {
+      "check": "6 cm circle matches OpenCV homography",
+      "result": "PASS"
+    },
+    {
+      "check": "inverse-projected circle radius remains 60 mm",
+      "result": "PASS"
+    },
+    {
+      "check": "corner ordering is independent of detector order",
+      "result": "PASS"
+    },
+    {
+      "check": "projective mapping improves the former affine approximation",
+      "result": "PASS"
+    },
+    {
+      "check": "K230 main imports the shared projective geometry",
+      "result": "PASS"
+    },
+    {
+      "check": "red target center has a geometry fallback and rejection gate",
+      "result": "PASS"
+    },
+    {
+      "check": "K230 boots in STOP with automatic laser disabled",
+      "result": "PASS"
+    },
+    {
+      "check": "geometry module stays MicroPython-compatible",
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

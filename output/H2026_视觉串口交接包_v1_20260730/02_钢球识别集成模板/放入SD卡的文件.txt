@@ -1,0 +1,12 @@
+把本目录以下三个文件放入：
+
+/sdcard/steel_ball/
+
+1. main.py
+2. h2026_uart_protocol.py
+3. steel_ball_yolov8n_320.kmodel
+
+第一次必须从 CanMV IDE 手动运行。
+完成左右像素标定后，才把 CALIBRATION_READY 改为 True。
+在确认连续运行稳定前，不要设置上电自启。
+
