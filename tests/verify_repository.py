@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import re
+import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -13,9 +14,12 @@ def main():
     with (ROOT / "docs/archive/source-manifest.csv").open(encoding="utf-8-sig", newline="") as handle:
         records = list(csv.DictReader(handle))
     errors = []
+    tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).decode("utf-8").split("\0"))
     for entry in records:
         path = ROOT / entry["Path"]
-        if not path.is_file():
+        if entry["Path"] not in tracked:
+            errors.append("untracked manifest entry: " + entry["Path"])
+        elif not path.is_file():
             errors.append("missing: " + entry["Path"])
         elif hashlib.sha256(path.read_bytes()).hexdigest() != entry["SHA256"]:
             errors.append("hash: " + entry["Path"])
