@@ -18,6 +18,7 @@
 | 底盘 | TB6612 双路驱动、增量编码器、定时器 PWM、轮速 PI |
 | 循迹 | 四路数字红外，离散状态解码、差速控制、速度斜坡、固定路线里程分段 |
 | 滚球 | 250 mm 管道，单步进电机齿轮齿条调倾，位置/速度反馈与题3序列状态机 |
+| 视觉子系统 | K230 YOLO11钢球检测、LCD/RTSP图传、模型与训练参考归档 |
 | 视觉接口 | K230 → USART2，9600 bit/s、8N1、RXNE 中断与环形缓冲 |
 | 调试与保护 | OLED 版本号、按键、300 ms 收帧超时、急停、相对脉冲计数保护 |
 | 早期方案 | MSPM0G3507、Code Composer Studio、SysConfig 与可复用控制模块 |
@@ -33,6 +34,9 @@
 | 控制算法 | [control/](H2026_STM32F407/STM32F407_ProjectTemplate/control/) |
 | 驱动层 | [bsp/](H2026_STM32F407/STM32F407_ProjectTemplate/bsp/) |
 | 串口帧解析 | [protocol/](H2026_STM32F407/STM32F407_ProjectTemplate/protocol/) |
+| 完整视觉阅读入口 | [vision/README.md](vision/README.md) |
+| K230检测/图传入口 | [vision/k230/main.py](vision/k230/main.py) |
+| 视觉部署与模型清单 | [部署说明](vision/docs/deployment.md) · [模型状态](vision/models/README.md) |
 | 当前状态与实测边界 | [docs/current-state.md](docs/current-state.md) |
 | 复现、编译和模式切换 | [docs/build-and-run.md](docs/build-and-run.md) |
 | 面试讲解与贡献说明 | [docs/portfolio.md](docs/portfolio.md) |
@@ -65,6 +69,14 @@ flowchart LR
 
 OLED 的 `D≈40420` 是编码器累计量，不是 40420 ms。`P/T` 是脉冲累计/目标命令，不是真实齿条位移反馈。更详细的错误归因、改进方向见 [工程复盘](docs/engineering-review.md)。
 
+## 视觉检测与图传
+
+![赛时K230钢球检测画面](docs/media/vision-detection.png)
+
+已补充[独立视觉目录](vision/README.md)：YOLO11检测与LCD叠加、WBC/H.264 RTSP、匹配STM32 V17的ASCII发送模块、部署步骤及模型/训练资料索引。整理版发送`[x,y]`绝对像素中心，LCD与串口共用同一坐标；无检测时静默，让STM32接收超时生效。
+
+旧YOLOv8参考模型、数据集、PT/ONNX/KModel和训练曲线齐全；队友最终YOLO11权重与运动补偿主程序未在本机找到。新增入口属于基于现有备份的接口适配，需补权重并重新上板验证，未将参考模型效果包装为最终实车指标。
+
 ## 仓库内容
 
 ```text
@@ -74,6 +86,7 @@ car_h2024_ccs/    MSPM0 H2024 复用工程
 h2026_uart_protocol*/  历史协议与联调程序
 k230_e2025/       早期视觉代码
 vision_e2025/     离线视觉实验
+vision/           K230检测、RTSP、当前ASCII接口、部署与模型索引
 offline_tools/   仿真、协议和引脚检查工具
 交接包/           赛时整套交接快照，含 V17 固件和现有 K230 资料
 咸鱼24电赛h/       原始工程、SDK 源码、厂商示例与参考资料

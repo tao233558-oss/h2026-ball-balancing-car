@@ -33,6 +33,10 @@
 
 `car_final_ccs` 和 `car_h2024_ccs` 使用各自的 `.projectspec` 导入 CCS，按各目录 README 安装 MSPM0 SDK/SysConfig。它们是复用和迁移阶段记录，不使用 STM32 接线表。
 
+## K230视觉入口
+
+视觉代码、RTSP、模型来源与部署步骤见[vision/README.md](../vision/README.md)。本次新增ASCII整理入口与STM32 V17格式匹配，未重新上板测试；YOLO11权重尚需从队友TF备份补齐。旧YOLOv8参考模型齐全，保留为独立参考，不改名替代YOLO11。
+
 ## 离线检查
 
 ```text

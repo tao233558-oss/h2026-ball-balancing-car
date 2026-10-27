@@ -19,3 +19,7 @@ jobs:
         run: python h2026_uart_protocol/test_protocol.py
       - name: Test host-side controller and parser checks
         run: python tests/host_checks.py
+      - name: Test visual coordinates, UART timing and actual STM32 parser
+        run: python -m unittest discover -s tests -p 'test_vision*.py' -v
+      - name: Audit available model files and report missing YOLO11 weights
+        run: python tools/verify_vision_assets.py

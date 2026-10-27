@@ -11,3 +11,4 @@ Thumbs.db
 .env
 .env.*
 rebuild.log
+vision/k230/local_config.py

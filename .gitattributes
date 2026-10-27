@@ -10,3 +10,5 @@
 *.hex linguist-generated
 *.axf linguist-generated
 docs/archive/*.csv linguist-generated
+# Preserve the teammate's original CRLF label file, including its final blank line.
+vision/k230/yolo11_gq_classes.txt whitespace=-blank-at-eof,-blank-at-eol,cr-at-eol
